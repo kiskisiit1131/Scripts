@@ -14,12 +14,12 @@ I found it tedious to have to compare this manually, so I wrote a script for it 
 
 *Test File*
 
-<img src="screenshots/website_hash.png" alt="sample hash"/>
+<img src="screenshots/website_hash.PNG" alt="sample hash"/>
 
 *Valid hash comparison*
 
-<img src="screenshots/example.png" alt="good match"/>
+<img src="screenshots/example.PNG" alt="good match"/>
 
 *Invalid hash comparison*
 
-<img src="screenshots/no_match.png" alt="bad match"/>
+<img src="screenshots/no_match.PNG" alt="bad match"/>
