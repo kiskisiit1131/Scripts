@@ -1,4 +1,4 @@
-﻿# Hash Comparer Script
+# Hash Comparer Script
 # By: Akvile Kiskis
 # Date: 08/04/2019
 #
@@ -52,18 +52,22 @@ function Compare-Hashes ($Algorithm)
     {
         Write-Host "The hashes match!" -ForegroundColor Green
     }
+
+    # ask if user would like to compare another file or exit
+    Write-Host -NoNewline "Would you like to compare another files? (Y/N) "
+    $response = Read-Host
+    If ( $response -ne "Y" -or $response -ne "y" ) { exit }
 }
 
 
 ###### Begin Script ######
-
-# Prompt user for the file hash they want to check
-$filePath = Get-FileName 
-
  
  # Check the hash - Give them options, let it run on a loop 
 do
 {
+    # Prompt user for the file hash they want to check
+     $filePath = Get-FileName 
+     
      Show-Menu
      $input = Read-Host "Please make a selection"
      switch ($input)
@@ -84,8 +88,6 @@ do
                 $Algorithm = "SHA512"
                 Compare-Hashes($Algorithm)
            } 
-
      }
-    pause
 }
 until ($input -eq '6')
